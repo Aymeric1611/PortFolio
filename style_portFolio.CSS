@@ -1,4 +1,12 @@
 body{
-    background-color: gray;
-    /*background: linear-gradient(90deg, #ac0404, #0a5757);*/
+    background: linear-gradient(90deg, #0f1d97, white, #ac0404 );
+    font-size: 25px;
+}
+
+a{
+    color: lightblue;
+}
+
+.container {
+    display: flex;
 }
