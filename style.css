@@ -1,0 +1,128 @@
+/* style.css - Styles simples et commentés pour débutants
+   Commentaires: j'explique brièvement chaque règle pour que l'élève comprenne. */
+
+/* 1) Mise en place d'un box-sizing pratique */
+* {
+  box-sizing: border-box; /* rend le calcul des tailles plus simple */
+}
+
+/* 2) Styles généraux de la page */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  color: #222;
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px; /* largeur lisible */
+  margin: 0 auto; /* centre horizontalement */
+  padding: 0 16px;
+}  
+
+/* Header / navigation */
+.site-header {
+  position: sticky; /* reste visible en haut lorsque l'on descend */
+  top: 0;
+  z-index: 1000;
+  background: #0b5cff; /* couleur principale */
+  color: #fff;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+/* Titre dans le header */
+.site-header .site-title { margin: 0; font-size: 1.2rem; }
+.site-header .site-title a { color: #fff; text-decoration: none; }
+
+.site-nav {
+  margin-top: 8px;
+}
+.site-nav a {
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+  margin-right: 12px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.site-nav a:hover,
+.site-nav a:focus {
+  background: rgba(255,255,255,0.12);
+  outline: none;
+}
+.site-nav a:focus {
+  outline: 3px solid rgba(255,255,255,0.22); /* aide pour clavier */
+  outline-offset: 2px;
+  border-radius: 4px;
+} 
+
+
+/* Indiquer la page active : on ajoute une couleur/ligne pour repérer la page courante */
+.site-nav a.active,
+.site-nav a[aria-current="page"] {
+  background: rgba(255,255,255,0.18);
+  border-bottom: 3px solid #1d0e9e; /* petite ligne bleue */
+  padding-bottom: 3px;
+}
+
+/* Contenu principal */
+.content { padding: 20px 0 40px 0; }
+.content h1 { color: #0b2b99; margin-top: 0; }
+.content p { color: #333; }
+.content ul { padding-left: 1.2rem; }
+
+/* Images: rendre responsive */
+.content img { max-width: 100%; height: auto; display: block; margin: 8px 0; }
+
+/* Petit rappel pour le profil CV externe */
+/* Le texte indiquant "(ouvre dans un nouvel onglet)" est retiré pour alléger l'affichage.
+   Si tu veux le réactiver plus tard, décommente la ligne suivante :
+   a[target="_blank"]::after { content: " (ouvre dans un nouvel onglet)"; font-size: 0.85rem; color: #555; } */
+
+/* Footer */
+.site-footer {
+  background: #f1f4f8;
+  color: #334;
+  padding: 14px 0;
+  border-top: 1px solid #e0e6ef;
+  text-align: center;
+}
+.site-footer a { color: #0b5cff; text-decoration: none; }
+
+/* Quelques classes utilitaires simples */
+.text-center { text-align: center; }
+.small { font-size: 0.9rem; color: #666; }
+
+/* Responsive: navigation en colonne sur petit écran */
+@media (max-width: 600px) {
+  .site-nav { display: flex; flex-wrap: wrap; }
+  .site-nav a { margin-bottom: 8px; }
+  .site-header .container { display: flex; flex-direction: column; gap: 6px; }
+}
+
+/* Fin du fichier - Explication: modifier les couleurs ou la police ici pour personnaliser le portfolio. */
+
+/* Footer */
+.site-footer {
+  background: #f1f4f8;
+  color: #334;
+  padding: 14px 0;
+  border-top: 1px solid #e0e6ef;
+  text-align: center;
+}
+.site-footer a { color: #0b5cff; text-decoration: none; }
+
+/* Quelques classes utilitaires simples */
+.text-center { text-align: center; }
+.small { font-size: 0.9rem; color: #666; }
+
+/* Responsive: navigation en colonne sur petit écran */
+@media (max-width: 600px) {
+  .site-nav { display: flex; flex-wrap: wrap; }
+  .site-nav a { margin-bottom: 8px; }
+  .site-header .container { display: flex; flex-direction: column; gap: 6px; }
+}
+
+/* Fin du fichier - Explication: modifier les couleurs ou la police ici pour personnaliser le portfolio. */
