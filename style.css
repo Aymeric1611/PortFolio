@@ -64,7 +64,7 @@ body {
 }
 
 /* Contenu principal */
-.content { padding: 20px 0 40px 0; }
+.content { padding: 20px 0 90px 0; }
 .content h1 { color: #0b2b99; margin-top: 0; }
 .content p { color: #333; }
 .content ul { padding-left: 1.2rem; }
@@ -79,6 +79,10 @@ body {
   padding: 14px 0;
   border-top: 1px solid #e0e6ef;
   text-align: center;
+  position: static bottom;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .site-footer a { color: #0b5cff; text-decoration: none; }
 
@@ -91,4 +95,35 @@ body {
   .site-nav { display: flex; flex-wrap: wrap; }
   .site-nav a { margin-bottom: 8px; }
   .site-header .container { display: flex; flex-direction: column; gap: 6px; }
+}
+
+/* Classe pour l'élément qui déclenche le tooltip */
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Le tooltip lui-même (bulle) */
+.tooltip::after {
+  content: attr(data-tooltip); /* Le texte vient de l'attribut data-tooltip */
+  position: absolute;
+  bottom: 100%; /* Positionne au-dessus de l'élément */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+
+/* Affiche le tooltip au survol */
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
