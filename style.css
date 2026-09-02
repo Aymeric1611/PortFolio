@@ -10,6 +10,8 @@ body {
   color: #222;
   background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
   margin: 0;
+  max-height: 1200px ;
+  padding: 0 auto;
 }
 
 .container {
